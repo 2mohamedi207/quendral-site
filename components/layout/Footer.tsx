@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
-import { XIcon, LinkedInIcon, GitHubIcon } from "@/components/ui/SocialIcons";
+import { InstagramIcon } from "@/components/ui/SocialIcons";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { QuendralMark } from "@/components/ui/QuendralMark";
 
@@ -45,10 +45,16 @@ export function Footer() {
               Careers
             </Link>
             <Link
-              href="mailto:hello@quendral.com"
+              href="mailto:info@luminaeautomations.com"
               className="text-sm text-muted transition-colors hover:text-foreground"
             >
-              Contact
+              info@luminaeautomations.com
+            </Link>
+            <Link
+              href="tel:+14036882364"
+              className="text-sm text-muted transition-colors hover:text-foreground"
+            >
+              403-688-2364
             </Link>
           </div>
 
@@ -58,14 +64,14 @@ export function Footer() {
             </span>
             <NewsletterForm />
             <div className="flex items-center gap-4 text-muted">
-              <Link href="#" aria-label="X (Twitter)" className="transition-colors hover:text-foreground">
-                <XIcon width={18} height={18} />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="transition-colors hover:text-foreground">
-                <LinkedInIcon width={18} height={18} />
-              </Link>
-              <Link href="#" aria-label="GitHub" className="transition-colors hover:text-foreground">
-                <GitHubIcon width={18} height={18} />
+              <Link
+                href="https://instagram.com/quendral.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="transition-colors hover:text-foreground"
+              >
+                <InstagramIcon width={18} height={18} />
               </Link>
             </div>
           </div>
