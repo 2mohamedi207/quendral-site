@@ -78,6 +78,7 @@ function welcomeEmailHtml(data: IntakePayload) {
     <div style="font-family: -apple-system, Segoe UI, sans-serif; max-width: 560px; margin: 0 auto; color: #17141d; line-height: 1.6;">
       <h1 style="font-size: 22px; margin-bottom: 4px;">You made the right call, ${firstName}.</h1>
       <p>Thanks for sending over the details for <strong>${businessName}</strong> — we've got what we need to get started.</p>
+      <p><strong>On billing:</strong> your setup fee covered today's charge and your first month. Your monthly plan charge starts automatically in 30 days — if you get an email from Stripe calling this a "free trial," that's just Stripe's standard wording for a delayed first charge, not a discount or a trial you need to cancel before it ends.</p>
       <p><strong>What happens next:</strong></p>
       <ol style="padding-left: 20px;">
         <li>We build your system using what you sent over — landing page, instant response, CRM setup.</li>
