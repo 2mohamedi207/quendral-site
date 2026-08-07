@@ -67,6 +67,9 @@ export async function POST(req: NextRequest) {
   );
   body.set("line_items[1][price_data][unit_amount]", String(monthlyCents));
   body.set("line_items[1][price_data][recurring][interval]", "month");
+  // Setup fee bills immediately at checkout; the recurring monthly price
+  // doesn't start invoicing until the 30-day trial on the subscription ends.
+  body.set("subscription_data[trial_period_days]", "30");
 
   const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {
     method: "POST",
