@@ -160,7 +160,7 @@ export function IntakeForm() {
         body: JSON.stringify(values),
       });
       const data = await res.json();
-      if (res.ok && data.clientEmailSent) {
+      if (res.ok && data.received) {
         setSubmitState("success");
       } else {
         setSubmitState("error");
@@ -228,16 +228,14 @@ export function IntakeForm() {
             className="gradient-border flex max-w-md flex-col items-center gap-2 rounded-2xl p-6"
           >
             <Check size={24} className="text-brand-pink-light" />
-            <p className="font-semibold">Submitted — a welcome email is on its way.</p>
-            <p className="text-sm text-muted">
-              We also got a copy internally. We&rsquo;ll be in touch shortly.
-            </p>
+            <p className="font-semibold">Submitted — we&rsquo;ve got everything we need.</p>
+            <p className="text-sm text-muted">We&rsquo;ll be in touch shortly to get things moving.</p>
           </motion.div>
         ) : (
           <>
             <p className="text-sm text-muted">
-              Submit sends a welcome email automatically — or use email/copy as a
-              backup if you&rsquo;d rather send it yourself.
+              Submit sends your info straight to us — or use email/copy as a backup
+              if you&rsquo;d rather send it yourself.
             </p>
             {submitState === "error" && (
               <p className="flex items-center gap-1.5 text-sm text-brand-pink-light">
