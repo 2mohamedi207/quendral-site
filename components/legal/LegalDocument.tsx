@@ -13,9 +13,10 @@ export function LegalDocument({ title, effectiveDate, children }: LegalDocumentP
       <div className="mb-10 flex items-start gap-3 rounded-2xl border border-brand-pink-light/30 bg-brand-pink-light/5 p-5">
         <AlertTriangle size={20} className="mt-0.5 shrink-0 text-brand-pink-light" />
         <p className="text-sm leading-relaxed text-muted">
-          This is a draft template, not legal advice. It hasn&rsquo;t been reviewed
-          by a lawyer and the placeholders (business details, jurisdiction) need to
-          be confirmed before you rely on it for real client agreements.
+          This document is based on a legal template and has not been reviewed by
+          a lawyer. It&rsquo;s a reasonable starting point, not legal advice —
+          get it reviewed by a licensed lawyer before relying on it for real
+          client agreements.
         </p>
       </div>
 
