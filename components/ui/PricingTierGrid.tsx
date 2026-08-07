@@ -1,13 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import type { IndustryPricingTier } from "@/lib/industries";
 
-export function PricingTierGrid({ tiers }: { tiers: IndustryPricingTier[] }) {
+function isCustomQuoteTier(tier: IndustryPricingTier) {
+  return tier.setupPrice === "Custom" || tier.monthlyPrice.includes("+");
+}
+
+export function PricingTierGrid({
+  tiers,
+  industrySlug,
+}: {
+  tiers: IndustryPricingTier[];
+  industrySlug: string;
+}) {
   const [openTier, setOpenTier] = useState<string | null>(null);
+  const [loadingTier, setLoadingTier] = useState<string | null>(null);
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (redirectUrl) window.location.href = redirectUrl;
+  }, [redirectUrl]);
+
+  async function handleGetStarted(tier: IndustryPricingTier) {
+    setLoadingTier(tier.name);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ industrySlug, tierName: tier.name }),
+      });
+      const data = await res.json();
+      if (data.configured && data.url) {
+        setRedirectUrl(data.url);
+        return;
+      }
+    } catch (err) {
+      console.error("Checkout request failed:", err);
+    }
+    setLoadingTier(null);
+    setRedirectUrl("/book");
+  }
 
   return (
     <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -94,13 +130,24 @@ export function PricingTierGrid({ tiers }: { tiers: IndustryPricingTier[] }) {
               )}
             </AnimatePresence>
 
-            <Button
-              href="/book"
-              variant={tier.highlighted ? "primary" : "secondary"}
-              className="w-full"
-            >
-              Get Started
-            </Button>
+            {isCustomQuoteTier(tier) ? (
+              <Button
+                href="/book"
+                variant={tier.highlighted ? "primary" : "secondary"}
+                className="w-full"
+              >
+                Get Started
+              </Button>
+            ) : (
+              <Button
+                type="button"
+                onClick={() => handleGetStarted(tier)}
+                variant={tier.highlighted ? "primary" : "secondary"}
+                className="w-full"
+              >
+                {loadingTier === tier.name ? "Redirecting…" : "Get Started"}
+              </Button>
+            )}
           </motion.div>
         );
       })}

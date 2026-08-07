@@ -62,7 +62,7 @@ export function Pricing() {
           </div>
         </motion.div>
 
-        <PricingTierGrid tiers={activeIndustry.pricingTiers} />
+        <PricingTierGrid tiers={activeIndustry.pricingTiers} industrySlug={activeIndustry.slug} />
         <PricingAddOns />
       </div>
     </section>
