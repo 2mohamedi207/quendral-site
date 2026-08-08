@@ -31,7 +31,7 @@ export function FloatingBookButton() {
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-6 right-6 z-40 sm:bottom-8 sm:right-8"
         >
-          <Button href="/book" className="shadow-[0_8px_40px_-8px_rgba(139,92,246,0.7)]">
+          <Button href="/book" className="shadow-card-lg">
             <Calendar size={16} />
             <span className="hidden sm:inline">Free Consultation</span>
             <ArrowRight size={16} className="sm:hidden" />

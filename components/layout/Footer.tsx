@@ -6,7 +6,7 @@ import { QuendralMark } from "@/components/ui/QuendralMark";
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-background-elevated">
+    <footer className="relative border-t border-border-subtle bg-background-elevated">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           <div className="col-span-2 flex flex-col gap-4 sm:col-span-1">
@@ -46,7 +46,7 @@ export function Footer() {
             </Link>
             <Link
               href="mailto:info@luminaeautomations.com"
-              className="text-sm text-muted transition-colors hover:text-foreground"
+              className="break-words text-sm text-muted transition-colors hover:text-foreground"
             >
               info@luminaeautomations.com
             </Link>
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-muted sm:flex-row">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border-subtle pt-8 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} Quendral. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-foreground">

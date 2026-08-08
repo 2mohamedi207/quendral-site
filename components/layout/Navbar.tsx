@@ -24,7 +24,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass py-3" : "bg-transparent py-6"
+        scrolled
+          ? "border-b border-border-subtle bg-background-elevated/90 py-3 backdrop-blur-sm"
+          : "bg-transparent py-6"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
@@ -53,7 +55,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-full glass md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-background-elevated md:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -71,7 +73,7 @@ export function Navbar() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden md:hidden"
           >
-            <div className="glass mx-6 mt-4 flex flex-col gap-4 rounded-2xl p-6">
+            <div className="mx-6 mt-4 flex flex-col gap-4 rounded-2xl border border-border-subtle bg-background-elevated p-6 shadow-card-lg">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

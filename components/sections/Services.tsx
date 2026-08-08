@@ -10,13 +10,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="What we do"
-          title={
-            <>
-              Automation built for
-              <br />
-              <span className="text-gradient">how you actually work</span>
-            </>
-          }
+          title="Automation built for how you actually work"
           description="Four ways we help home service businesses and real estate teams book more work and ship faster, powered by AI that's trained on your process, not a generic template."
         />
 

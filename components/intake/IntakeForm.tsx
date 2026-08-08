@@ -179,7 +179,7 @@ export function IntakeForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}
-          className="gradient-border flex flex-col gap-5 rounded-2xl p-8"
+          className="flex flex-col gap-5 rounded-2xl border border-border-subtle bg-background-elevated p-8 shadow-card"
         >
           <h2 className="text-lg font-bold tracking-tight">{section.title}</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -192,7 +192,7 @@ export function IntakeForm() {
               >
                 <label htmlFor={field.key} className="text-xs font-semibold text-muted">
                   {field.label}
-                  {field.required && <span className="text-brand-pink-light"> *</span>}
+                  {field.required && <span className="text-accent"> *</span>}
                 </label>
                 {field.type === "textarea" ? (
                   <textarea
@@ -201,7 +201,7 @@ export function IntakeForm() {
                     value={values[field.key] ?? ""}
                     onChange={(e) => update(field.key, e.target.value)}
                     rows={3}
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-brand-purple-light"
+                    className="w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-accent"
                   />
                 ) : (
                   <input
@@ -210,7 +210,7 @@ export function IntakeForm() {
                     placeholder={field.placeholder}
                     value={values[field.key] ?? ""}
                     onChange={(e) => update(field.key, e.target.value)}
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-brand-purple-light"
+                    className="w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-accent"
                   />
                 )}
                 {field.helper && <p className="text-xs text-muted">{field.helper}</p>}
@@ -225,9 +225,9 @@ export function IntakeForm() {
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="gradient-border flex max-w-md flex-col items-center gap-2 rounded-2xl p-6"
+            className="flex max-w-md flex-col items-center gap-2 rounded-2xl border border-border-subtle bg-background-elevated p-6 shadow-card"
           >
-            <Check size={24} className="text-brand-pink-light" />
+            <Check size={24} className="text-accent" />
             <p className="font-semibold">Submitted — we&rsquo;ve got everything we need.</p>
             <p className="text-sm text-muted">We&rsquo;ll be in touch shortly to get things moving.</p>
           </motion.div>
@@ -238,7 +238,7 @@ export function IntakeForm() {
               if you&rsquo;d rather send it yourself.
             </p>
             {submitState === "error" && (
-              <p className="flex items-center gap-1.5 text-sm text-brand-pink-light">
+              <p className="flex items-center gap-1.5 text-sm text-red-600">
                 <AlertCircle size={14} />
                 {values.contactEmail?.trim()
                   ? "Couldn't send automatically — use Email This In or Copy below instead."
@@ -261,7 +261,7 @@ export function IntakeForm() {
               <button
                 type="button"
                 onClick={handleCopy}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold tracking-tight text-foreground transition-colors hover:border-white/40"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border-subtle px-7 py-3.5 text-sm font-semibold tracking-[-0.01em] text-foreground transition-colors hover:border-accent"
               >
                 {copied ? <Check size={16} /> : <Copy size={16} />}
                 {copied ? "Copied" : "Copy All Answers"}

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { GradientBlob } from "@/components/ui/GradientBlob";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
@@ -15,27 +14,12 @@ export default function CheckoutSuccessPage() {
     <>
       <Navbar />
       <main className="relative flex-1 overflow-hidden pb-24 pt-36">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <GradientBlob
-            className="-left-40 -top-20"
-            colors={["var(--brand-blue)", "var(--brand-purple)"]}
-            size={500}
-          />
-          <GradientBlob
-            className="-right-32 bottom-0"
-            colors={["var(--brand-purple)", "var(--brand-pink)"]}
-            size={450}
-            slow
-          />
-        </div>
-
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 px-6 text-center lg:px-8">
-          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-purple),var(--brand-pink))] text-white">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-tint text-accent">
             <CheckCircle2 size={28} strokeWidth={2.25} />
           </span>
-          <h1 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
-            You&rsquo;re in.
-            <span className="text-gradient"> Let&rsquo;s get you set up.</span>
+          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] sm:text-5xl">
+            You&rsquo;re in. Let&rsquo;s get you set up.
           </h1>
           <p className="text-lg text-muted">
             Payment received — a confirmation is on its way to your email. Next, fill
@@ -54,12 +38,12 @@ export default function CheckoutSuccessPage() {
             Questions in the meantime? Email{" "}
             <a
               href="mailto:info@luminaeautomations.com"
-              className="text-brand-purple-light hover:underline"
+              className="text-accent hover:underline"
             >
               info@luminaeautomations.com
             </a>{" "}
             or call{" "}
-            <a href="tel:+14036882364" className="text-brand-purple-light hover:underline">
+            <a href="tel:+14036882364" className="text-accent hover:underline">
               403-688-2364
             </a>
             .

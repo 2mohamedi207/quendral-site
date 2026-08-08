@@ -12,17 +12,17 @@ interface AccordionItemProps {
 
 export function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProps) {
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-border-subtle">
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
       >
-        <span className="text-lg font-semibold tracking-tight">{question}</span>
+        <span className="text-lg font-semibold tracking-[-0.01em]">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-brand-purple-light"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-tint text-accent"
         >
           <Plus size={18} />
         </motion.span>

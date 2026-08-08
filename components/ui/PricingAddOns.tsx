@@ -12,7 +12,7 @@ export function PricingAddOns() {
       transition={{ duration: 0.6 }}
       className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2"
     >
-      <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-background-elevated p-6 text-center">
+      <div className="flex flex-col gap-2 rounded-2xl border border-border-subtle bg-background-elevated p-6 text-center">
         <h4 className="text-sm font-bold uppercase tracking-widest text-muted">
           {websiteAddOn.title}
         </h4>
@@ -23,7 +23,7 @@ export function PricingAddOns() {
         <p className="text-xs text-muted">{websiteAddOn.note}</p>
       </div>
 
-      <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-background-elevated p-6 text-center">
+      <div className="flex flex-col gap-2 rounded-2xl border border-border-subtle bg-background-elevated p-6 text-center">
         <h4 className="text-sm font-bold uppercase tracking-widest text-muted">
           {platformCostsAddOn.title}
         </h4>

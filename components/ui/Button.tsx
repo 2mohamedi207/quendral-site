@@ -16,10 +16,9 @@ interface ButtonProps {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary:
-    "text-white shadow-[0_0_30px_-8px_rgba(139,92,246,0.7)] bg-[length:200%_auto] bg-[linear-gradient(115deg,var(--brand-blue)_0%,var(--brand-purple)_50%,var(--brand-pink)_100%)] hover:bg-[position:100%_center]",
-  secondary: "text-foreground border border-white/20 hover:border-white/40 glass",
-  ghost: "text-foreground hover:text-brand-purple-light",
+  primary: "text-white bg-accent shadow-card hover:bg-accent-dark",
+  secondary: "text-foreground border border-border-subtle bg-background-elevated hover:border-accent",
+  ghost: "text-foreground hover:text-accent",
 };
 
 export function Button({

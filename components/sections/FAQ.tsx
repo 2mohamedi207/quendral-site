@@ -13,12 +13,7 @@ export function FAQ() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-[0.8fr_1fr] lg:px-8">
         <SectionHeading
           eyebrow="FAQ"
-          title={
-            <>
-              Questions,
-              <span className="text-gradient"> answered</span>
-            </>
-          }
+          title="Questions, answered"
           description="Everything you need to know before booking a call. Don't see your question — ask us directly."
         />
 

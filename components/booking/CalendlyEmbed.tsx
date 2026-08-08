@@ -10,8 +10,8 @@ const CALENDLY_URL = "https://calendly.com/luminaeautomations-info/30min";
 
 export function CalendlyEmbed() {
   return (
-    <div className="gradient-border flex flex-col items-center gap-6 rounded-2xl p-10 text-center sm:p-14">
-      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-purple),var(--brand-pink))] text-white">
+    <div className="flex flex-col items-center gap-6 rounded-2xl border border-border-subtle bg-background-elevated p-10 text-center shadow-card sm:p-14">
+      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-tint text-accent">
         <CalendarClock size={28} strokeWidth={2.25} />
       </span>
       <div className="flex flex-col gap-2">

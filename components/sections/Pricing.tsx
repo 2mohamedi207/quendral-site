@@ -18,25 +18,20 @@ export function Pricing() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Pricing"
-          title={
-            <>
-              Pricing built around
-              <span className="text-gradient"> what a lead is worth to you</span>
-            </>
-          }
+          title="Pricing built around what a lead is worth to you"
           description={pricingCommitment}
           align="center"
           className="mx-auto"
         />
 
-        <div className="mx-auto mt-10 flex w-fit gap-1 rounded-full border border-white/10 bg-background-elevated p-1">
+        <div className="mx-auto mt-10 flex w-fit gap-1 rounded-full border border-border-subtle bg-background-elevated p-1">
           {industries.map((industry) => (
             <button
               key={industry.slug}
               onClick={() => setActiveSlug(industry.slug)}
               className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors duration-200 ${
                 activeSlug === industry.slug
-                  ? "bg-[linear-gradient(115deg,var(--brand-blue),var(--brand-purple),var(--brand-pink))] text-white"
+                  ? "bg-accent text-white"
                   : "text-muted hover:text-foreground"
               }`}
             >
@@ -51,11 +46,11 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mt-10 flex max-w-2xl items-start gap-3 rounded-2xl border border-brand-purple-light/30 bg-brand-purple-light/5 p-6"
+          className="mx-auto mt-10 flex max-w-2xl items-start gap-3 rounded-2xl border border-accent/25 bg-accent-tint p-6"
         >
-          <Sparkles size={20} className="mt-0.5 shrink-0 text-brand-pink-light" />
+          <Sparkles size={20} className="mt-0.5 shrink-0 text-accent" />
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-brand-purple-light">
+            <p className="text-sm font-bold uppercase tracking-widest text-accent">
               {foundingOffer.headline} — limited to {foundingOffer.cap} clients
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted">{foundingOffer.description}</p>

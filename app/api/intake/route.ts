@@ -87,12 +87,12 @@ function welcomeEmailHtml(data: IntakePayload) {
       </ol>
       <p>Worth keeping on hand:</p>
       <ul style="padding-left: 20px;">
-        <li><a href="${siteUrl}/agreement" style="color: #8b5cf6;">Service Agreement</a></li>
-        <li><a href="${siteUrl}/terms" style="color: #8b5cf6;">Terms of Service</a></li>
-        <li><a href="${siteUrl}/privacy" style="color: #8b5cf6;">Privacy Policy</a></li>
+        <li><a href="${siteUrl}/agreement" style="color: #1d4ed8;">Service Agreement</a></li>
+        <li><a href="${siteUrl}/terms" style="color: #1d4ed8;">Terms of Service</a></li>
+        <li><a href="${siteUrl}/privacy" style="color: #1d4ed8;">Privacy Policy</a></li>
       </ul>
       <p>Questions any time — just reply to this email.</p>
-      <p style="color: #6b6470;">— Quendral</p>
+      <p style="color: #5b6470;">— Quendral</p>
     </div>
   `;
 }

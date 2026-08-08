@@ -12,12 +12,7 @@ export function IndustryPicker() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="What we do for you"
-          title={
-            <>
-              What kind of business
-              <span className="text-gradient"> are you?</span>
-            </>
-          }
+          title="What kind of business are you?"
           description="Pick your industry and see exactly how we automate lead generation, follow-up, and CRM management for businesses like yours."
           align="center"
           className="mx-auto"
@@ -36,18 +31,18 @@ export function IndustryPicker() {
               >
                 <Link
                   href={`/industries/${industry.slug}`}
-                  className="gradient-border group flex h-full flex-col gap-6 rounded-2xl p-8 transition-shadow duration-300 hover:shadow-[0_0_50px_-12px_rgba(139,92,246,0.6)]"
+                  className="group flex h-full flex-col gap-6 rounded-2xl border border-border-subtle bg-background-elevated p-8 shadow-card transition-shadow duration-300 hover:shadow-card-lg"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-purple),var(--brand-pink))] text-white transition-transform duration-300 group-hover:scale-110">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-tint text-accent transition-transform duration-300 group-hover:scale-110">
                     <Icon size={26} strokeWidth={2.25} />
                   </div>
                   <div className="flex flex-1 flex-col gap-2">
-                    <h3 className="text-2xl font-bold tracking-tight">
+                    <h3 className="text-2xl font-bold tracking-[-0.02em]">
                       {industry.shortLabel}
                     </h3>
                     <p className="text-sm leading-relaxed text-muted">{industry.tagline}</p>
                   </div>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-purple-light">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
                     See how it works
                     <ArrowRight
                       size={16}

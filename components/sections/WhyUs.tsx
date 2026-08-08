@@ -10,12 +10,7 @@ export function WhyUs() {
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Why us"
-          title={
-            <>
-              We&rsquo;re not going to pretend we have it all figured out.
-              <span className="text-gradient"> We&rsquo;re going to earn it with you.</span>
-            </>
-          }
+          title="We're not going to pretend we have it all figured out. We're going to earn it with you."
           align="center"
           className="mx-auto"
         />
@@ -25,13 +20,13 @@ export function WhyUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="gradient-border mx-auto mt-14 flex max-w-3xl flex-col gap-6 rounded-2xl p-8 sm:p-10"
+          className="mx-auto mt-14 flex max-w-3xl flex-col gap-6 rounded-2xl border border-border-subtle bg-background-elevated p-8 shadow-card sm:p-10"
         >
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--brand-blue),var(--brand-purple),var(--brand-pink))] text-white">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-tint text-accent">
               <ShieldCheck size={18} strokeWidth={2.25} />
             </span>
-            <span className="text-sm font-bold uppercase tracking-widest text-brand-purple-light">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">
               No highlight reel — just commitment
             </span>
           </div>
