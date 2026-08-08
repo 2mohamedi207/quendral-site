@@ -5,6 +5,7 @@ interface IntakePayload {
   contactName?: string;
   contactEmail?: string;
   contactPhone?: string;
+  trade?: string;
   serviceArea?: string;
   services?: string;
   businessHours?: string;
@@ -26,6 +27,7 @@ const FIELD_LABELS: Record<keyof IntakePayload, string> = {
   contactName: "Contact name",
   contactEmail: "Contact email",
   contactPhone: "Contact phone",
+  trade: "Trade",
   serviceArea: "Service area",
   services: "Services offered",
   businessHours: "Business hours",

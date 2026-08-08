@@ -1,17 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PricingTierGrid } from "@/components/ui/PricingTierGrid";
 import { PricingAddOns } from "@/components/ui/PricingAddOns";
 import { foundingOffer, pricingCommitment } from "@/lib/data";
-import { industries } from "@/lib/industries";
+import { getIndustry } from "@/lib/industries";
 
 export function Pricing() {
-  const [activeSlug, setActiveSlug] = useState(industries[0].slug);
-  const activeIndustry = industries.find((i) => i.slug === activeSlug) ?? industries[0];
+  const activeIndustry = getIndustry("home-services")!;
 
   return (
     <section id="pricing" className="relative py-28 sm:py-36">
@@ -23,22 +21,6 @@ export function Pricing() {
           align="center"
           className="mx-auto"
         />
-
-        <div className="mx-auto mt-10 flex w-fit gap-1 rounded-full border border-border-subtle bg-background-elevated p-1">
-          {industries.map((industry) => (
-            <button
-              key={industry.slug}
-              onClick={() => setActiveSlug(industry.slug)}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors duration-200 ${
-                activeSlug === industry.slug
-                  ? "bg-accent text-white"
-                  : "text-muted hover:text-foreground"
-              }`}
-            >
-              {industry.shortLabel}
-            </button>
-          ))}
-        </div>
 
         <motion.div
           key={activeIndustry.slug}

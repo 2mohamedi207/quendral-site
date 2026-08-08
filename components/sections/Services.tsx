@@ -11,7 +11,7 @@ export function Services() {
         <SectionHeading
           eyebrow="What we do"
           title="Automation built for how you actually work"
-          description="Four ways we help home service businesses and real estate teams book more work and ship faster, powered by AI that's trained on your process, not a generic template."
+          description="Four ways we help trades and home service businesses book more work and ship faster, powered by AI that's trained on your process, not a generic template."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

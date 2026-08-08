@@ -1,7 +1,6 @@
 import { Target, Repeat, Bot, Database, Search, PenTool, Hammer, Rocket, TrendingUp } from "lucide-react";
 
 export const navLinks = [
-  { label: "Industries", href: "/#industries" },
   { label: "Services", href: "/#services" },
   { label: "Process", href: "/#process" },
   { label: "Why Us", href: "/#why-us" },

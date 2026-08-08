@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, Copy, Check, Send, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -27,6 +27,12 @@ const SECTIONS: SectionConfig[] = [
       { key: "contactName", label: "Your name", required: true },
       { key: "contactEmail", label: "Your email", type: "email", required: true },
       { key: "contactPhone", label: "Your phone", type: "tel", required: true },
+      {
+        key: "trade",
+        label: "Your trade",
+        placeholder: "e.g. Plumbing, Electrical, HVAC, Roofing",
+        required: true,
+      },
       { key: "serviceArea", label: "Service area(s)", placeholder: "e.g. Calgary + 25km radius" },
       {
         key: "services",
@@ -147,11 +153,8 @@ export function IntakeForm() {
     setTimeout(() => setCopied(false), 2000);
   }
 
-  async function handleSubmit() {
-    if (!values.contactEmail?.trim()) {
-      setSubmitState("error");
-      return;
-    }
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
     setSubmitState("submitting");
     try {
       const res = await fetch("/api/intake", {
@@ -171,7 +174,7 @@ export function IntakeForm() {
   }
 
   return (
-    <div className="flex flex-col gap-10">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-10">
       {SECTIONS.map((section) => (
         <motion.div
           key={section.title}
@@ -200,6 +203,7 @@ export function IntakeForm() {
                     placeholder={field.placeholder}
                     value={values[field.key] ?? ""}
                     onChange={(e) => update(field.key, e.target.value)}
+                    required={field.required}
                     rows={3}
                     className="w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-accent"
                   />
@@ -210,6 +214,7 @@ export function IntakeForm() {
                     placeholder={field.placeholder}
                     value={values[field.key] ?? ""}
                     onChange={(e) => update(field.key, e.target.value)}
+                    required={field.required}
                     className="w-full rounded-xl border border-border-subtle bg-background px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-accent"
                   />
                 )}
@@ -240,15 +245,12 @@ export function IntakeForm() {
             {submitState === "error" && (
               <p className="flex items-center gap-1.5 text-sm text-red-600">
                 <AlertCircle size={14} />
-                {values.contactEmail?.trim()
-                  ? "Couldn't send automatically — use Email This In or Copy below instead."
-                  : "Add your email above first."}
+                Couldn&rsquo;t send automatically — use Email This In or Copy below instead.
               </p>
             )}
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button
-                type="button"
-                onClick={handleSubmit}
+                type="submit"
                 className={submitState === "submitting" ? "opacity-70" : ""}
               >
                 <Send size={16} />
@@ -267,9 +269,13 @@ export function IntakeForm() {
                 {copied ? "Copied" : "Copy All Answers"}
               </button>
             </div>
+            <p className="text-xs text-muted">
+              <span className="text-accent">*</span> Required — we need these to
+              follow up with you.
+            </p>
           </>
         )}
       </div>
-    </div>
+    </form>
   );
 }
