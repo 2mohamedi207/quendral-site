@@ -3,6 +3,7 @@ import {
   Home,
   PhoneCall,
   MessageSquare,
+  MessageCircle,
   Users,
   Repeat,
   Star,
@@ -10,6 +11,7 @@ import {
   CalendarClock,
   Megaphone,
   FileText,
+  Receipt,
   ClipboardList,
   type LucideIcon,
 } from "lucide-react";
@@ -118,21 +120,33 @@ export const industries: Industry[] = [
         description:
           "See quote requests, booked jobs, and close rate in one live dashboard — no more guessing what's working.",
       },
+      {
+        icon: MessageCircle,
+        title: "Website Chatbot",
+        description:
+          "An AI chat widget on your site answers visitor questions and captures leads in real time, for people who'd rather type than call.",
+      },
+      {
+        icon: Receipt,
+        title: "Automated Invoicing",
+        description:
+          "Once a job's booked, an invoice goes out automatically — no more chasing paperwork after the work's done.",
+      },
     ],
     pricingTiers: [
       {
         name: "Core",
-        setupPrice: "$749",
-        monthlyPrice: "$497",
-        description: "Lead capture, instant response, follow-up, and CRM.",
+        setupPrice: "$899",
+        monthlyPrice: "$597",
+        description: "A full business website, instant response, follow-up, and CRM.",
         features: [
-          "Dedicated lead-capture landing page",
+          "Full business website — not just a landing page",
           "Instant SMS & email response",
           "Follow-up sequence on every estimate",
           "CRM setup & management",
         ],
         detailedSteps: [
-          "We build your dedicated lead-capture landing page, wired to a form that texts and emails you the instant it's submitted.",
+          "We build your full business website, wired to a lead-capture form that texts and emails you the instant it's submitted — hosting and updates included for as long as you're on the plan.",
           "Every call, text, or form submission gets an automated reply within seconds — day or night.",
           "If a quote goes out and gets no reply, our follow-up sequence texts and emails the customer at set intervals until they book or say no.",
           "We set up and clean your CRM — every lead deduped, tagged, and moved through clear pipeline stages.",
@@ -141,22 +155,39 @@ export const industries: Industry[] = [
         highlighted: false,
       },
       {
+        name: "Receptionist & Workflows",
+        setupPrice: "$999",
+        monthlyPrice: "$697",
+        description: "AI receptionist and automated workflows — for businesses that already have a way to capture leads.",
+        features: [
+          "AI receptionist — answers calls 24/7",
+          "Books straight to your calendar",
+          "Instant response & follow-up on leads from your existing site",
+          "CRM setup & management",
+        ],
+        detailedSteps: [
+          "We design and deploy a 24/7 AI receptionist that answers your business line, gathers job details, and talks in your tone — no landing page build needed since you've already got a way for people to reach you.",
+          "The receptionist books qualified calls straight onto your calendar — no back-and-forth texting.",
+          "We wire instant automated replies into your existing site or form, so every lead gets a response within seconds, day or night.",
+          "If a lead goes quiet, our follow-up sequence texts and emails them at set intervals until they book or say no.",
+          "We set up and clean your CRM — every lead deduped, tagged, and moved through clear pipeline stages.",
+        ],
+        highlighted: false,
+      },
+      {
         name: "Plus",
         setupPrice: "$1,249",
         monthlyPrice: "$897",
-        description: "Everything in Core, plus an AI receptionist that never misses a call.",
+        description: "Everything in Receptionist & Workflows, plus a full business website and monthly strategy check-ins.",
         features: [
-          "Everything in Core",
-          "AI receptionist — answers calls 24/7",
-          "Books straight to your calendar",
+          "Everything in Receptionist & Workflows",
+          "Full business website — not just a landing page",
           "Monthly strategy check-ins",
         ],
         detailedSteps: [
-          "Everything in Core, built first.",
-          "We design and deploy a 24/7 AI receptionist that answers your business line, gathers job details, and talks in your tone.",
-          "The receptionist books qualified calls straight onto your calendar — no back-and-forth texting.",
-          "We test the call flow against real scenarios — after-hours calls, overlapping callers, edge cases — before it goes live.",
-          "Monthly strategy check-in where we review call transcripts together and refine the script.",
+          "Everything in Receptionist & Workflows, built first.",
+          "We build your full business website, wired into the same instant-response and follow-up system, so leads from the new site get the same treatment as everything else — hosting and updates included for as long as you're on the plan.",
+          "Monthly strategy check-in where we review call transcripts and lead flow together and refine the system.",
         ],
         highlighted: true,
       },

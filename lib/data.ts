@@ -81,12 +81,12 @@ export const foundingOffer = {
 };
 
 export const websiteAddOn = {
-  title: "Website",
-  price: "$99/month",
+  title: "Your website, even if you cancel",
+  price: "$329/month",
   description:
-    "A new site built around lead capture and wired directly into your automation system. Hosting, updates, and content changes included for as long as you're on the plan.",
+    "A full business website is included starting on the Core plan — built around lead capture and wired directly into your automation system, with hosting and updates covered while you're on the plan. If you ever cancel your automation plan, your website and lead-capture forms don't just disappear: they keep running standalone for $329/month.",
   note:
-    "12-month minimum on the initial build, then month-to-month. Content updates included up to twice a month — bigger redesigns are quoted separately.",
+    "Content updates included up to twice a month while on an automation plan — bigger redesigns are quoted separately.",
 };
 
 export const platformCostsAddOn = {

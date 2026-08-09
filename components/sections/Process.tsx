@@ -15,7 +15,7 @@ export function Process() {
         />
 
         <div className="relative mt-20">
-          <div className="absolute left-6 top-0 hidden h-full w-px bg-border-subtle sm:block" />
+          <div className="absolute left-6 top-6 bottom-16 hidden w-px bg-border-subtle sm:block" />
           <div className="flex flex-col gap-12">
             {processSteps.map((step, index) => {
               const Icon = step.icon;

@@ -46,7 +46,11 @@ export function PricingTierGrid({
   }
 
   return (
-    <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+    <div
+      className={`mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 ${
+        tiers.length >= 4 ? "xl:grid-cols-4" : "lg:grid-cols-3"
+      }`}
+    >
       {tiers.map((tier, index) => {
         const isOpen = openTier === tier.name;
         return (
