@@ -84,7 +84,7 @@ export const websiteAddOn = {
   title: "Your website, even if you cancel",
   price: "$329/month",
   description:
-    "A full business website is included starting on the Core plan — built around lead capture and wired directly into your automation system, with hosting and updates covered while you're on the plan. If you ever cancel your automation plan, your website and lead-capture forms don't just disappear: they keep running standalone for $329/month, with a 6-month minimum commitment.",
+    "Core includes a dedicated lead-capture landing page; a full business website is included starting on the Plus plan — built around lead capture and wired directly into your automation system, with hosting and updates covered while you're on the plan. If you ever cancel an automation plan that included a website, it doesn't just disappear: it keeps running standalone for $329/month, with a 6-month minimum commitment.",
   note:
     "Content updates included up to twice a month while on an automation plan — bigger redesigns are quoted separately. The 6-month minimum applies only to the standalone continuity plan after cancellation, not to the automation plans themselves, which stay month-to-month.",
 };

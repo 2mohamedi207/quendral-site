@@ -136,17 +136,17 @@ export const industries: Industry[] = [
     pricingTiers: [
       {
         name: "Core",
-        setupPrice: "$899",
-        monthlyPrice: "$597",
-        description: "A full business website, instant response, follow-up, and CRM.",
+        setupPrice: "$749",
+        monthlyPrice: "$497",
+        description: "Lead capture, instant response, follow-up, and CRM.",
         features: [
-          "Full business website — not just a landing page",
+          "Dedicated lead-capture landing page",
           "Instant SMS & email response",
           "Follow-up sequence on every estimate",
           "CRM setup & management",
         ],
         detailedSteps: [
-          "We build your full business website, wired to a lead-capture form that texts and emails you the instant it's submitted — hosting and updates included for as long as you're on the plan.",
+          "We build your dedicated lead-capture landing page, wired to a form that texts and emails you the instant it's submitted.",
           "Every call, text, or form submission gets an automated reply within seconds — day or night.",
           "If a quote goes out and gets no reply, our follow-up sequence texts and emails the customer at set intervals until they book or say no.",
           "We set up and clean your CRM — every lead deduped, tagged, and moved through clear pipeline stages.",
