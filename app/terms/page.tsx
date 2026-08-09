@@ -76,6 +76,15 @@ export default function TermsPage() {
               ends as of the cancellation date.
             </p>
             <p>
+              The one exception is the standalone website continuity plan: if
+              you cancel an automation plan and elect to keep your website and
+              lead-capture forms running on their own, that standalone plan
+              carries a 6-month minimum commitment from its start date and
+              cannot be cancelled before that term ends. This minimum applies
+              only to the standalone continuity plan — automation plans
+              themselves remain month-to-month as described above.
+            </p>
+            <p>
               Payments already made prior to cancellation — including setup fees
               and any billed subscription periods — are non-refundable, and no
               partial refunds are issued for unused time within a billing period.
