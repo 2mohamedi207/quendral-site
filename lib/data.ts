@@ -82,13 +82,6 @@ export const websiteAddOn = {
     "Content updates included up to twice a month while on an automation plan — bigger redesigns are quoted separately. The 6-month minimum applies only to the standalone continuity plan after cancellation, not to the automation plans themselves, which stay month-to-month.",
 };
 
-export const platformCostsAddOn = {
-  title: "Platform costs",
-  price: "Billed at cost",
-  description:
-    "Twilio, voice AI minutes, and automation platform fees are passed straight through, itemized monthly — no markup. These scale with your call volume, so we'll always be upfront about what's driving the number.",
-};
-
 export const pricingCommitment = "Month-to-month. No long-term contracts. Cancel anytime.";
 
 export const faqs = [
