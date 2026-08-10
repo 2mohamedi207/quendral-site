@@ -26,11 +26,13 @@ interface IntakePayload {
   currentCrm?: string;
   existingDataExport?: string;
   teamAccess?: string;
+  reportingPreferences?: string;
   crewList?: string;
   invoicingMethod?: string;
   paymentMethods?: string;
   autoInvoice?: string;
   brandAssets?: string;
+  reviewsLink?: string;
   commonQuestions?: string;
   toneNotes?: string;
   notes?: string;
@@ -62,11 +64,13 @@ const FIELD_LABELS: Record<keyof IntakePayload, string> = {
   currentCrm: "Current CRM",
   existingDataExport: "Existing data to import",
   teamAccess: "Team access needed",
+  reportingPreferences: "Reporting preferences",
   crewList: "Crew/team list",
   invoicingMethod: "Current invoicing method",
   paymentMethods: "Accepted payment methods",
   autoInvoice: "Wants automated invoicing",
   brandAssets: "Brand assets link",
+  reviewsLink: "Reviews / Google Business Profile link",
   commonQuestions: "Common customer questions",
   toneNotes: "Tone notes",
   notes: "Notes",

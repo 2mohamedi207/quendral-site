@@ -156,6 +156,12 @@ const SECTIONS: SectionConfig[] = [
         type: "textarea",
         placeholder: "Names, emails, roles — owner, office manager, crew leads...",
       },
+      {
+        key: "reportingPreferences",
+        label: "What do you actually want to see in your reporting?",
+        type: "textarea",
+        placeholder: "e.g. jobs booked per week, close rate, lead source, crew performance",
+      },
     ],
   },
   {
@@ -197,6 +203,11 @@ const SECTIONS: SectionConfig[] = [
         key: "brandAssets",
         label: "Link to logo/photos",
         placeholder: "Google Drive, Dropbox, etc.",
+      },
+      {
+        key: "reviewsLink",
+        label: "Link to your Google Business Profile or existing reviews",
+        placeholder: "For featuring real testimonials and setting up review requests",
       },
       {
         key: "commonQuestions",
