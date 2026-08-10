@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, Copy, Check, Send, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -115,6 +115,15 @@ const SECTIONS: SectionConfig[] = [
   },
 ];
 
+function readFormValues(form: HTMLFormElement): Record<string, string> {
+  const data = new FormData(form);
+  const result: Record<string, string> = {};
+  for (const [key, value] of data.entries()) {
+    if (typeof value === "string") result[key] = value;
+  }
+  return result;
+}
+
 function buildSummary(values: Record<string, string>) {
   const lines: string[] = [];
   for (const section of SECTIONS) {
@@ -133,6 +142,7 @@ function buildSummary(values: Record<string, string>) {
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export function IntakeForm() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState<Record<string, string>>({});
   const [copied, setCopied] = useState(false);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
@@ -141,26 +151,35 @@ export function IntakeForm() {
     setValues((prev) => ({ ...prev, [key]: value }));
   }
 
-  const summary = buildSummary(values);
-  const businessName = values.businessName || "New Client";
-  const mailtoHref = `mailto:info@luminaeautomations.com?subject=${encodeURIComponent(
-    `New Client Intake — ${businessName}`
-  )}&body=${encodeURIComponent(summary)}`;
-
   async function handleCopy() {
-    await navigator.clipboard.writeText(summary);
+    const current = formRef.current ? readFormValues(formRef.current) : values;
+    await navigator.clipboard.writeText(buildSummary(current));
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
 
-  async function handleSubmit(e: FormEvent) {
+  function handleEmailIn() {
+    const current = formRef.current ? readFormValues(formRef.current) : values;
+    const businessName = current.businessName || "New Client";
+    const href = `mailto:info@luminaeautomations.com?subject=${encodeURIComponent(
+      `New Client Intake — ${businessName}`
+    )}&body=${encodeURIComponent(buildSummary(current))}`;
+    window.location.href = href;
+  }
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitState("submitting");
     try {
+      // Read straight from the DOM instead of trusting React state — some
+      // browsers' autofill sets input values without firing the events React
+      // listens for, which can leave `values` stale even though the fields
+      // look filled on screen.
+      const current = readFormValues(e.currentTarget);
       const res = await fetch("/api/intake", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify(current),
       });
       const data = await res.json();
       if (res.ok && data.received) {
@@ -174,7 +193,7 @@ export function IntakeForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+    <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-10">
       {SECTIONS.map((section) => (
         <motion.div
           key={section.title}
@@ -200,6 +219,7 @@ export function IntakeForm() {
                 {field.type === "textarea" ? (
                   <textarea
                     id={field.key}
+                    name={field.key}
                     placeholder={field.placeholder}
                     value={values[field.key] ?? ""}
                     onChange={(e) => update(field.key, e.target.value)}
@@ -210,6 +230,7 @@ export function IntakeForm() {
                 ) : (
                   <input
                     id={field.key}
+                    name={field.key}
                     type={field.type ?? "text"}
                     placeholder={field.placeholder}
                     value={values[field.key] ?? ""}
@@ -256,7 +277,7 @@ export function IntakeForm() {
                 <Send size={16} />
                 {submitState === "submitting" ? "Submitting..." : "Submit"}
               </Button>
-              <Button href={mailtoHref} variant="secondary">
+              <Button type="button" onClick={handleEmailIn} variant="secondary">
                 <Mail size={16} />
                 Email This In
               </Button>
