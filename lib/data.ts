@@ -73,13 +73,6 @@ export const processSteps = [
   },
 ];
 
-export const foundingOffer = {
-  headline: "Founding client offer",
-  description:
-    "$499 setup and 50% off your first 3 months on any plan, in exchange for a case study and testimonial once we've delivered results. Limited to our first 5 clients — after that, standard pricing applies.",
-  cap: 5,
-};
-
 export const websiteAddOn = {
   title: "Your website, even if you cancel",
   price: "$329/month",
