@@ -10,12 +10,26 @@ interface IntakePayload {
   services?: string;
   businessHours?: string;
   escalationPhone?: string;
+  businessPhone?: string;
+  phoneSetup?: string;
+  afterHours?: string;
+  urgentHandling?: string;
+  neverPromise?: string;
+  currentCalendar?: string;
+  appointmentLength?: string;
   hasWebsite?: string;
   websiteUrl?: string;
   domainName?: string;
   notifyEmail?: string;
+  leadStages?: string;
+  averageJobValue?: string;
   currentCrm?: string;
+  existingDataExport?: string;
   teamAccess?: string;
+  crewList?: string;
+  invoicingMethod?: string;
+  paymentMethods?: string;
+  autoInvoice?: string;
   brandAssets?: string;
   commonQuestions?: string;
   toneNotes?: string;
@@ -32,12 +46,26 @@ const FIELD_LABELS: Record<keyof IntakePayload, string> = {
   services: "Services offered",
   businessHours: "Business hours",
   escalationPhone: "Escalation phone",
+  businessPhone: "Business phone (customer-facing)",
+  phoneSetup: "Phone setup",
+  afterHours: "AI answering hours",
+  urgentHandling: "Urgent call handling",
+  neverPromise: "Receptionist must never say",
+  currentCalendar: "Current calendar/booking tool",
+  appointmentLength: "Typical appointment length",
   hasWebsite: "Has website",
   websiteUrl: "Website URL",
   domainName: "Domain name",
   notifyEmail: "Notification email",
+  leadStages: "Lead-to-job process",
+  averageJobValue: "Average job value",
   currentCrm: "Current CRM",
+  existingDataExport: "Existing data to import",
   teamAccess: "Team access needed",
+  crewList: "Crew/team list",
+  invoicingMethod: "Current invoicing method",
+  paymentMethods: "Accepted payment methods",
+  autoInvoice: "Wants automated invoicing",
   brandAssets: "Brand assets link",
   commonQuestions: "Common customer questions",
   toneNotes: "Tone notes",

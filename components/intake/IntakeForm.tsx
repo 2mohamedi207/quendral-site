@@ -50,6 +50,54 @@ const SECTIONS: SectionConfig[] = [
     ],
   },
   {
+    title: "Phone & AI receptionist",
+    fields: [
+      {
+        key: "businessPhone",
+        label: "Business phone customers call",
+        type: "tel",
+        helper: "The number that needs to connect to the AI receptionist.",
+      },
+      {
+        key: "phoneSetup",
+        label: "Forward your current number, or get a new one?",
+        placeholder: "Forward my existing number / Get a new number",
+      },
+      {
+        key: "afterHours",
+        label: "When should the AI answer?",
+        placeholder: "24/7 / Only after-hours / Only when I can't pick up",
+      },
+      {
+        key: "urgentHandling",
+        label: "How should genuinely urgent calls be handled?",
+        type: "textarea",
+        placeholder: "e.g. burst pipe, no heat in winter — who gets called, how fast",
+      },
+      {
+        key: "neverPromise",
+        label: "Anything the receptionist should never say or promise?",
+        type: "textarea",
+        placeholder: "e.g. never quote an exact price, never promise same-day service",
+      },
+    ],
+  },
+  {
+    title: "Calendar & booking",
+    fields: [
+      {
+        key: "currentCalendar",
+        label: "What do you use today to book appointments, if anything?",
+        placeholder: "Nothing, a paper calendar, Google Calendar, etc.",
+      },
+      {
+        key: "appointmentLength",
+        label: "Typical length of a consultation or estimate visit",
+        placeholder: "e.g. 30 minutes, 1 hour",
+      },
+    ],
+  },
+  {
     title: "Website & domain",
     fields: [
       {
@@ -73,6 +121,23 @@ const SECTIONS: SectionConfig[] = [
     ],
   },
   {
+    title: "Your lead-to-job process",
+    fields: [
+      {
+        key: "leadStages",
+        label: "Walk me through what happens from a new lead to a paid job, step by step",
+        type: "textarea",
+        placeholder: "e.g. quote request → site visit → written estimate → deposit → scheduled → done",
+        helper: "This is what your CRM pipeline stages get built from.",
+      },
+      {
+        key: "averageJobValue",
+        label: "Typical or average job value",
+        placeholder: "e.g. $5,000–$15,000, or varies widely",
+      },
+    ],
+  },
+  {
     title: "CRM & team",
     fields: [
       {
@@ -81,10 +146,47 @@ const SECTIONS: SectionConfig[] = [
         placeholder: "Spreadsheet, nothing, or name your current CRM",
       },
       {
+        key: "existingDataExport",
+        label: "Existing customer/lead data to import?",
+        placeholder: "Link to a spreadsheet/export, or \"nothing to import\"",
+      },
+      {
         key: "teamAccess",
-        label: "Who needs access?",
+        label: "Who needs login access?",
         type: "textarea",
-        placeholder: "Names/roles — owner, office manager, crew leads...",
+        placeholder: "Names, emails, roles — owner, office manager, crew leads...",
+      },
+    ],
+  },
+  {
+    title: "Crew & routing",
+    fields: [
+      {
+        key: "crewList",
+        label: "List your crews/team members and their service area or specialty",
+        type: "textarea",
+        placeholder: "Name — area or specialty, one per line",
+        helper: "Skip this if it's just you right now.",
+      },
+    ],
+  },
+  {
+    title: "Invoicing",
+    fields: [
+      {
+        key: "invoicingMethod",
+        label: "How do you invoice customers today?",
+        placeholder: "e.g. paper invoice, e-transfer request by text, nothing formal",
+      },
+      {
+        key: "paymentMethods",
+        label: "What payment methods do you accept?",
+        placeholder: "e.g. e-transfer, card, cheque",
+      },
+      {
+        key: "autoInvoice",
+        label: "Want invoices sent automatically once a job's marked complete?",
+        placeholder: "Yes / No / Not sure yet",
       },
     ],
   },
