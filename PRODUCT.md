@@ -48,7 +48,7 @@ Not a generic AI/automation reseller — built specifically for home services an
 ## Evidence on Hand
 
 - Zero real client testimonials, logos, or published results exist yet (one client recently closed via cold-calling; delivery not yet complete). Do not fabricate any in this redesign.
-- Real pricing is final and current in `lib/industries.ts` (Home Services: Core $497/749 · Plus $897/1249 · Multi-Crew $1497/1999 monthly/setup; Real Estate: Solo Agent $797/999 · Team $1497/1999 · Brokerage custom) — treat as source of truth, don't invent different numbers.
+- Real pricing is final and current in `lib/industries.ts` (Home Services only — Real Estate was fully removed: Core $597/849 · Receptionist & Workflows $897/1249 · Plus $1297/1749 · Multi-Crew $2297/2999, monthly/setup) — treat as source of truth, don't invent different numbers.
 
 ## Product Principles
 

@@ -131,8 +131,8 @@ export const industries: Industry[] = [
     pricingTiers: [
       {
         name: "Core",
-        setupPrice: "$749",
-        monthlyPrice: "$497",
+        setupPrice: "$849",
+        monthlyPrice: "$597",
         description: "Lead capture, instant response, follow-up, and CRM.",
         features: [
           "Dedicated lead-capture landing page",
@@ -151,8 +151,8 @@ export const industries: Industry[] = [
       },
       {
         name: "Receptionist & Workflows",
-        setupPrice: "$999",
-        monthlyPrice: "$697",
+        setupPrice: "$1,249",
+        monthlyPrice: "$897",
         description: "AI receptionist and automated workflows — for businesses that already have a way to capture leads.",
         features: [
           "AI receptionist — answers calls 24/7",
@@ -171,8 +171,8 @@ export const industries: Industry[] = [
       },
       {
         name: "Plus",
-        setupPrice: "$1,249",
-        monthlyPrice: "$897",
+        setupPrice: "$1,749",
+        monthlyPrice: "$1,297",
         description: "Everything in Receptionist & Workflows, plus a full business website and monthly strategy check-ins.",
         features: [
           "Everything in Receptionist & Workflows",
@@ -188,8 +188,8 @@ export const industries: Industry[] = [
       },
       {
         name: "Multi-Crew",
-        setupPrice: "$1,999",
-        monthlyPrice: "$1,497",
+        setupPrice: "$2,999",
+        monthlyPrice: "$2,297",
         description: "Multiple crews or locations, with custom job routing.",
         features: [
           "Everything in Plus",
