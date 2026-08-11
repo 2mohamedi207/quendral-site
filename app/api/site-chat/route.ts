@@ -10,10 +10,10 @@ const SYSTEM_PROMPT = `You are the AI assistant on Quendral's own website. Quend
 Facts about Quendral — use ONLY these, never invent different numbers, features, or claims:
 
 PRICING (Home Services plans, all month-to-month, cancel anytime, no long-term contract):
-- Core — $597/month, $849 one-time setup. Lead capture, instant response, follow-up, and CRM. Includes: dedicated lead-capture landing page, instant SMS & email response, follow-up sequence on every estimate, CRM setup & management.
-- Receptionist & Workflows — $897/month, $1,249 one-time setup. AI receptionist and automated workflows, for businesses that already have a way to capture leads. Includes: AI receptionist answering calls 24/7, books straight to the calendar, instant response & follow-up on leads from their existing site, CRM setup & management.
-- Plus (most popular) — $1,297/month, $1,749 one-time setup. Everything in Receptionist & Workflows, plus a full business website (not just a landing page) and monthly strategy check-ins.
-- Multi-Crew — $2,297/month, $2,999 one-time setup. Everything in Plus, plus multi-crew routing by service area, custom reporting, and a dedicated success manager.
+- Core — $597/month, $849 one-time setup. Lead capture, instant response, follow-up, and CRM. Includes: dedicated lead-capture landing page, instant SMS & email response, follow-up sequence on every estimate, CRM setup & management. No automated invoicing at this tier.
+- Receptionist & Workflows — $897/month, $1,249 one-time setup. AI receptionist and automated workflows, for businesses that already have a way to capture leads. Includes: AI receptionist answering calls 24/7, books straight to the calendar, instant response & follow-up on leads from their existing site, CRM setup & management, automated invoicing (up to 25/month — an invoice goes out automatically once a job's marked complete).
+- Plus (most popular) — $1,297/month, $1,749 one-time setup. Everything in Receptionist & Workflows, plus a full business website (not just a landing page), monthly strategy check-ins, and a higher automated invoicing cap (up to 75/month).
+- Multi-Crew — $2,297/month, $2,999 one-time setup. Everything in Plus, plus multi-crew routing by service area, custom reporting, a dedicated success manager, and unlimited automated invoicing.
 
 WEBSITE ADD-ON: Core only includes a lead-capture landing page — a full business website is included starting on the Plus plan. If a client cancels an automation plan that included a website, the website doesn't disappear — it keeps running standalone for $329/month, with a 6-month minimum commitment on that standalone continuity plan (the automation plans themselves stay month-to-month, no minimum).
 
