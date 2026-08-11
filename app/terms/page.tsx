@@ -42,7 +42,7 @@ export default function TermsPage() {
             <p>
               Quendral provides AI automation services — including lead capture,
               automated follow-up, CRM setup, and AI voice receptionists — for home
-              service and real estate businesses. Specific scope, pricing, and
+              service and trades businesses. Specific scope, pricing, and
               deliverables for any engagement are set out in a separate Service
               Agreement between Quendral and the client.
             </p>

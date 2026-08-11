@@ -31,8 +31,8 @@ export function WhyUs() {
             </span>
           </div>
           <p className="text-lg leading-relaxed text-foreground/90">
-            Quendral is a new studio built specifically for home services and real
-            estate businesses — not a repurposed marketing agency. We don&rsquo;t have
+            Quendral is a new studio built specifically for Calgary trades
+            businesses — not a repurposed marketing agency. We don&rsquo;t have
             a decade of case studies to show you. What we do have is full attention:
             every client gets hands-on setup, fast responses, and someone who treats
             your business like it&rsquo;s the only one on our list.

@@ -15,35 +15,38 @@ const siteUrl = "https://quendral.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Quendral | AI Automation Agency",
+    default: "Quendral | AI Automation for Calgary Trades",
     template: "%s | Quendral",
   },
   description:
-    "Quendral designs and builds AI-powered workflows, agents, and integrations that eliminate busywork and scale your operations — without scaling headcount.",
+    "Quendral builds AI automation for Calgary home services and trades businesses — instant call and text response, an AI receptionist that never misses a call, and CRM built around your process.",
   keywords: [
-    "AI automation agency",
-    "AI agents",
-    "workflow automation",
-    "business process automation",
-    "AI consulting",
-    "RPA",
+    "AI automation Calgary",
+    "AI receptionist for contractors",
+    "missed call text back",
+    "trades CRM",
+    "home services automation",
+    "instant lead response",
   ],
   openGraph: {
-    title: "Quendral | AI Automation Agency",
+    title: "Quendral | AI Automation for Calgary Trades",
     description:
-      "We design and build AI-powered workflows, agents, and integrations that eliminate busywork and scale your operations.",
+      "Instant call and text response, an AI receptionist that never misses a call, and CRM built around how Calgary trades businesses actually work.",
     url: siteUrl,
     siteName: "Quendral",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quendral | AI Automation Agency",
+    title: "Quendral | AI Automation for Calgary Trades",
     description:
-      "We design and build AI-powered workflows, agents, and integrations that eliminate busywork and scale your operations.",
+      "Instant call and text response, an AI receptionist that never misses a call, and CRM built around how Calgary trades businesses actually work.",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-512.png", type: "image/png", sizes: "512x512" },
+    ],
   },
 };
 
