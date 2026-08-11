@@ -3,7 +3,6 @@ import { Target, Repeat, Bot, Database, Search, PenTool, Hammer, Rocket, Trendin
 export const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "Process", href: "/#process" },
-  { label: "Demo", href: "/#demo" },
   { label: "Why Us", href: "/#why-us" },
   { label: "Pricing", href: "/#pricing" },
   { label: "FAQ", href: "/#faq" },
