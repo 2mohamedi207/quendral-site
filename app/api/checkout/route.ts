@@ -53,6 +53,11 @@ export async function POST(req: NextRequest) {
   body.set("success_url", `${siteUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`);
   body.set("cancel_url", `${siteUrl}/#pricing`);
   body.set("allow_promotion_codes", "true");
+  body.set("phone_number_collection[enabled]", "true");
+  body.set("custom_fields[0][key]", "business_name");
+  body.set("custom_fields[0][label][type]", "custom");
+  body.set("custom_fields[0][label][custom]", "Business name");
+  body.set("custom_fields[0][type]", "text");
   body.set("line_items[0][quantity]", "1");
   body.set("line_items[0][price_data][currency]", currency);
   body.set(
